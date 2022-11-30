@@ -6,7 +6,7 @@ app.use('/places', require('./controllers/places'))
 //homepage 
 app.get('/', (req, res) => {
     res.send ('hello world')
-} )
+})
 
 //adds a wildcard route/404 page
 app.get('*', (req, res) => {
