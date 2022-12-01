@@ -1,0 +1,25 @@
+const React = require('react')
+const Default = require('../default')
+
+function index (data) {
+    let placesFormatted = data.places.map((place) =>{
+    return(
+        <div>
+            <main>
+                <h2>{place.name}</h2>
+                <img src={place.pic} alt={place.name}></img>
+             </main>
+        </div>
+    )
+})
+return (
+    <Default>
+        <main>
+            <h1>PLACES INDEX PAGE</h1>
+            {placesFormatted}
+        </main>
+    </Default>
+)
+}
+
+module.exports = index
