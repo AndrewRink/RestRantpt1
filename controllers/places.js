@@ -39,7 +39,6 @@ router.get('/', (req,res) => {
 
 router.put('/:id', (req, res) => {
   let id = Number(req.params.id)
-  console.log(id)
   if (isNaN(id)) {
       res.render('error404')
   }
@@ -59,11 +58,13 @@ router.put('/:id', (req, res) => {
       }
       places[id] = req.body
       res.redirect(`/places/${id}`)
+    
   }
 })
 
 router.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
+  
   if (isNaN(id)) {
     res.render('error404')
   }
@@ -76,7 +77,7 @@ router.delete('/:id', (req, res) => {
   }
 })
 
-router.get('/:id/edit', (req, res) =>{
+router.get('/:id/edit', (req, res) => {
   let id= Number(req.params.id)
   if (isNaN(id)) {
     res.render ('error404')

@@ -3,7 +3,7 @@ h1 {
     color: cornflowerblue;
   }
 
-.homeImage {
+#homeImage {
   width: 25%;
   height: 25%;
   justify-content: center;
