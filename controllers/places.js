@@ -78,7 +78,6 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.post('/:id/comment', (req, res) => {
-  console.log(req.body)
   req.body.rant = req.body.rant ? true : false
   db.Place.findById(req.params.id)
   .then(place => {
